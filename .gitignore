@@ -1,0 +1,3 @@
+**/01_docker_sql/ny_taxi_postgres_data/
+.env/
+.DS_Store
