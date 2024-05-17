@@ -1,4 +1,4 @@
-# Module 1 HW
+# [Module 1 HW](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/cohorts/2024/01-docker-terraform/homework.md)
 ## Docker & SQL
 ### Question 1 - Docker tags
 **Steps**
@@ -26,4 +26,26 @@ pip list
 ```
 The version of the package `wheel` is 0.43.0
 
-### Question 3 - 
+### Question 3 - Count records
+```
+-- Question 3
+select count(distinct index) as ttl_trips
+from ny_taxi.public.green_tripdata_2019
+where date(lpep_pickup_datetime) = '2019-09-18'
+	and date(lpep_dropoff_datetime) = '2019-09-18'
+;
+```
+On September 18, 2019, there were a total of 15,612 distinct green taxi trips in New York City. This count represents all trips that both started and ended on that particular day. 
+This volume of trips can be used to assess the usage patterns of green taxis, inform city transportation planning, and understand the impact of green taxis on New York City's broader transportation ecosystem on that specific day.
+
+### Question 4 - Longest trip for each day
+```
+select *
+from ny_taxi.public.green_tripdata_2019
+order by trip_distance desc
+limit 1
+;
+```
+On September 26, 2019, the green taxi with the longest recorded trip distance for that year began its journey. This specific day stands out as the date with the single longest trip recorded among all the green taxi rides in 2019. 
+
+### Question 5 - 
