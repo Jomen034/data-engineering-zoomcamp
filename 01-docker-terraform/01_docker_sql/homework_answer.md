@@ -61,3 +61,9 @@ having sum(total_amount)>50000
 order by 2 desc
 ;
 ```
+On September 18, 2019, the three boroughs with the highest total fare amounts from green taxi pick-ups, each exceeding $50,000, **were Brooklyn, Manhattan, and Queens**. Here are the total fare amounts for each of these boroughs:
+- Brooklyn: $96,333.24
+- Manhattan: $92,271.30
+- Queens: $78,671.71
+
+This data indicates that Brooklyn, Manhattan, and Queens were the most lucrative areas for green taxi drivers on that particular day, highlighting significant taxi activity and passenger demand in these boroughs.
