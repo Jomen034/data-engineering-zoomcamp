@@ -57,7 +57,7 @@ left join ny_taxi.public.taxi_zone_lookup tzl on tzl."LocationID" = gt."PULocati
 where date(lpep_pickup_datetime) = '2019-09-18'
 	and tzl."Borough" != 'Unknown'
 group by 1
+having sum(total_amount)>50000
 order by 2 desc
-limit 3
 ;
 ```
