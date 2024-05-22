@@ -28,7 +28,6 @@ The version of the package `wheel` is 0.43.0
 
 ### Question 3 - Count records
 ```
--- Question 3
 select count(distinct index) as ttl_trips
 from ny_taxi.public.green_tripdata_2019
 where date(lpep_pickup_datetime) = '2019-09-18'
@@ -48,4 +47,17 @@ limit 1
 ```
 On September 26, 2019, the green taxi with the longest recorded trip distance for that year began its journey. This specific day stands out as the date with the single longest trip recorded among all the green taxi rides in 2019. 
 
-### Question 5 - 
+### Question 5 - Three biggest pick up Boroughs
+```
+select 
+	tzl."Borough" ,
+	sum(total_amount) as total_amount 
+from ny_taxi.public.green_tripdata_2019 gt 
+left join ny_taxi.public.taxi_zone_lookup tzl on tzl."LocationID" = gt."PULocationID" 
+where date(lpep_pickup_datetime) = '2019-09-18'
+	and tzl."Borough" != 'Unknown'
+group by 1
+order by 2 desc
+limit 3
+;
+```
