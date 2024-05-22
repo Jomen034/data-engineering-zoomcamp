@@ -68,7 +68,7 @@ On September 18, 2019, the three boroughs with the highest total fare amounts fr
 
 This data indicates that Brooklyn, Manhattan, and Queens were the most lucrative areas for green taxi drivers on that particular day, highlighting significant taxi activity and passenger demand in these boroughs.
 
-### Question 6 - 
+### Question 6 - Largest tip
 ```
 select 
 	gt."index" ,
