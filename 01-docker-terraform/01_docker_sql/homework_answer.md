@@ -67,3 +67,22 @@ On September 18, 2019, the three boroughs with the highest total fare amounts fr
 - Queens: $78,671.71
 
 This data indicates that Brooklyn, Manhattan, and Queens were the most lucrative areas for green taxi drivers on that particular day, highlighting significant taxi activity and passenger demand in these boroughs.
+
+### Question 6 - 
+```
+select 
+	gt."index" ,
+	gt."PULocationID" ,
+	puloc."Zone" as pu_zone,
+	gt."DOLocationID" ,
+	doloc."Zone" as do_zone,
+	gt.tip_amount 
+from ny_taxi.public.green_tripdata_2019 gt 
+left join ny_taxi.public.taxi_zone_lookup puloc on puloc."LocationID" = gt."PULocationID" 
+left join ny_taxi.public.taxi_zone_lookup doloc on doloc."LocationID" = gt."DOLocationID" 
+where puloc."Zone" = 'Astoria'
+order by 6 desc 
+limit 1 
+;
+```
+For passengers picked up in the zone named Astoria in September 2019, **the drop-off zone that received the largest tip was JFK Airport**. The largest tip amount recorded for such a trip was $62.31. This indicates that a trip from Astoria to JFK Airport resulted in the highest tip given during that period, suggesting a particularly generous gratuity for that specific route.
