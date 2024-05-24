@@ -94,12 +94,28 @@ Just finishied to create my resources using terraform. The resources are:
 - Google Bucket
 
 ```
+terraform apply
+.
+.
+.
 google_bigquery_dataset.demo_dataset: Creating...
 google_storage_bucket.demo-bucket: Creating...
 google_bigquery_dataset.demo_dataset: Creation complete after 1s [id=projects/skilled-nation-422203-s6/datasets/demo_dataset]
 google_storage_bucket.demo-bucket: Creation complete after 1s [id=skilled-nation-422203-s6-terra-demo-bucket]
 ```
 ![image](https://github.com/Jomen034/data-engineering-zoomcamp2024/assets/71366136/0da025be-0ee7-4a87-9b5f-c9b29a6febd5)
+
+```
+terraform destroy
+.
+.
+.
+google_storage_bucket.demo-bucket: Destroying... [id=skilled-nation-422203-s6-terra-demo-bucket]
+google_bigquery_dataset.demo_dataset: Destroying... [id=projects/skilled-nation-422203-s6/datasets/demo_dataset]
+google_bigquery_dataset.demo_dataset: Destruction complete after 0s
+google_storage_bucket.demo-bucket: Destruction complete after 2s
+```
+![Screenshot 2024-05-24 at 08 23 39](https://github.com/Jomen034/data-engineering-zoomcamp2024/assets/71366136/28f288df-8663-4c6e-8b9d-67b58517d98a)
 
 #### Here is my key takes from the terraform basics
 **Introduction to Terraform**
