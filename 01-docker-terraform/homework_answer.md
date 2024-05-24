@@ -99,6 +99,8 @@ google_storage_bucket.demo-bucket: Creating...
 google_bigquery_dataset.demo_dataset: Creation complete after 1s [id=projects/skilled-nation-422203-s6/datasets/demo_dataset]
 google_storage_bucket.demo-bucket: Creation complete after 1s [id=skilled-nation-422203-s6-terra-demo-bucket]
 ```
+![image](https://github.com/Jomen034/data-engineering-zoomcamp2024/assets/71366136/0da025be-0ee7-4a87-9b5f-c9b29a6febd5)
+
 #### Here is my key takes from the terraform basics
 **Introduction to Terraform**
 
