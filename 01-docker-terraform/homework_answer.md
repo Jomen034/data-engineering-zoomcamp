@@ -86,3 +86,48 @@ limit 1
 ;
 ```
 For passengers picked up in the zone named Astoria in September 2019, **the drop-off zone that received the largest tip was JFK Airport**. The largest tip amount recorded for such a trip was $62.31. This indicates that a trip from Astoria to JFK Airport resulted in the highest tip given during that period, suggesting a particularly generous gratuity for that specific route.
+
+## Terraform Basic with Variables
+### Question 7 - Creating Resources
+Just finishied to create my resources using terraform. The resources are:
+- Google Big Query Dataset
+- Google Bucket
+
+```
+google_bigquery_dataset.demo_dataset: Creating...
+google_storage_bucket.demo-bucket: Creating...
+google_bigquery_dataset.demo_dataset: Creation complete after 1s [id=projects/skilled-nation-422203-s6/datasets/demo_dataset]
+google_storage_bucket.demo-bucket: Creation complete after 1s [id=skilled-nation-422203-s6-terra-demo-bucket]
+```
+#### Here is my key takes from the terraform basics
+**Introduction to Terraform**
+
+**Overview:** Terraform is an open-source infrastructure as code (IaC) tool that enables the management of infrastructure resources through code.
+
+**Core Commands:**
+init: Initializes a new or existing Terraform configuration.
+plan: Generates an execution plan, showing what actions Terraform will take.
+apply: Applies the changes required to reach the desired state of the configuration.
+destroy: Destroys the infrastructure managed by the Terraform configuration.
+T
+**Terraform Basics**
+- Configuration: Use HashiCorp Configuration Language (HCL) to define infrastructure resources in .tf files.
+- State Management: Keeps track of resource states and allows for the consistent management of infrastructure.
+- Modules: Encapsulate and reuse configurations.
+
+**Terraform with Variables**
+- Defining Variables: Use variable blocks to define inputs to your configurations.
+- Assigning Values: Assign variable values through .tfvars files, environment variables, or CLI flags.
+- Output Variables: Use output blocks to extract and display values after configuration is applied.
+
+**Setting Up Environment on Google Cloud Platform (GCP)**
+- GCP Integration: Use Terraform to manage GCP resources like Google BigQuery and Google Cloud Storage (buckets).
+- Provider Configuration: Configure the GCP provider with appropriate credentials and project information.
+- Resource Management:
+  - Google BigQuery: Create datasets and tables.
+  - Google Cloud Storage: Create and manage storage buckets.
+
+**Key Takeaways**
+- Automation: Terraform automates infrastructure provisioning and management.
+- Scalability: Efficiently manage infrastructure at scale using reusable configurations and modules.
+- Consistency: Ensure consistent environments by codifying infrastructure.
