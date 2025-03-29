@@ -8,17 +8,16 @@ terraform {
 }
 
 provider "google" {
-  # Configuration options
   credentials = file(var.credentials)
   project     = var.project
   region      = var.region
+
 }
 
 resource "google_storage_bucket" "demo-bucket" {
   name          = var.gcs_bucket_name
   location      = var.location
   force_destroy = true
-
 
   lifecycle_rule {
     condition {
@@ -31,6 +30,6 @@ resource "google_storage_bucket" "demo-bucket" {
 }
 
 resource "google_bigquery_dataset" "demo_dataset" {
-  dataset_id = var.bq_datase_name
+  dataset_id = var.bq_dataset_name
   location   = var.location
 }

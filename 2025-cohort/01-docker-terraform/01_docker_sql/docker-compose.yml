@@ -1,4 +1,19 @@
+version: '3.8'
 services:
+  csv_ingestion:
+    build: .
+    container_name: csv_ingestion
+    command: [
+      "--user=root",
+      "--password=root",
+      "--host=pgdatabase",
+      "--port=5432",
+      "--db=ny_taxi",
+      "--table_name=yellow_taxi_trips",
+      "--url=https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+    ]
+    depends_on:
+      - pgdatabase
   pgdatabase:
     image: postgres:13
     environment:
@@ -8,7 +23,7 @@ services:
     volumes:
       - "./ny_taxi_postgres_data:/var/lib/postgresql/data:rw"
     ports:
-      - "5432:5432"
+      - "5433:5432"
   pgadmin:
     image: dpage/pgadmin4
     environment:

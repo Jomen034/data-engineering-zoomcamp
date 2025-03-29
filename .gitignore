@@ -1,3 +1,5 @@
 **/01_docker_sql/ny_taxi_postgres_data/
+**/01-docker-terraform/
+**/02-workflow-orchestration/
 .env/
 .DS_Store

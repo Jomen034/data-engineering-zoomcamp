@@ -1,6 +1,6 @@
 variable "credentials" {
   description = "My Credentials"
-  default     = "./keys/creds_key.json"
+  default     = "./keys/my-creds.json"
 }
 
 variable "project" {
@@ -18,7 +18,7 @@ variable "location" {
   default     = "US"
 }
 
-variable "bq_datase_name" {
+variable "bq_dataset_name" {
   description = "My BQ Dataset Name"
   default     = "demo_dataset"
 }
