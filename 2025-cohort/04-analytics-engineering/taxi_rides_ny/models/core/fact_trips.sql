@@ -56,3 +56,4 @@ inner join dim_zones as dropoff_zone
     on trips_unioned.dropoff_locationid = dropoff_zone.locationid
 
 -- add this line just for testing CI Checks
+-- add more line for testing CI checks job
