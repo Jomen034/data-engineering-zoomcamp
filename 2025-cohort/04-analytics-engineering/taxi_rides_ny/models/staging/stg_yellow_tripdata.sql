@@ -21,7 +21,8 @@ select
     
     -- trip info
     store_and_fwd_flag,
-    {{ dbt.safe_cast("passenger_count", api.Column.translate_type("integer")) }} as passenger_count,
+    -- {{ dbt.safe_cast("passenger_count", api.Column.translate_type("integer")) }} as passenger_count,
+    cast(passenger_count as integer) as passenger_count,
     cast(trip_distance as numeric) as trip_distance,
     -- yellow cabs are always street-hail
     1 as trip_type,
